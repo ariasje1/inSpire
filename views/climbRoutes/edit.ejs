@@ -1,0 +1,54 @@
+<% layout('layout/boilerplate')%>
+<div class="row">
+    <h1 class="text-center">Edit Climbing Route</h1>
+    <div class="col-6 offset-3">
+        <form action="/climbRoutes/<%=climbRoute._id%>?_method=PUT" method="POST" class="validated-form" novalidate enctype="multipart/form-data">
+            <div class="mb-3">
+                <label class="form-label" for="title">Title</label>
+                <input class="form-control" type="text" id="title" name="climbRoute[title]"
+                    value="<%=climbRoute.title %>" required>
+                <div class="valid-feedback">Looks good!</div>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="location">Location</label>
+                <input class="form-control" type="text" id="location" name="climbRoute[location]"
+                    value="<%=climbRoute.location %>" required>
+                <div class="valid-feedback">Looks good!</div>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="image">Add Images</label>
+                <input class="form-control" type="file" id="image" name="images" multiple>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="price">Access Fee</label>
+                <div class="input-group">
+                    <span class="input-group-text" id="price-label">$</span>
+                    <input type="text" class="form-control" id="price" placeholder="0.00" aria-label="price"
+                        aria-describedby="price-label" name="climbRoute[price]" value="<%=climbRoute.price %>" required>
+                    <div class="valid-feedback">Looks good!</div>
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label" for="description">Description</label>
+                <textarea class="form-control" type="text" id="description"
+                    name="climbRoute[description]"><%= climbRoute.description%></textarea>
+                <div class="valid-feedback">Looks good!</div>
+            </div>
+            <div class="mb-3">
+                <% climbRoute.images.forEach(function(image, index){ %>
+                    <img src="<%= image.thumbnail %>" alt="<%= image.filename %>" class="img-thumbnail">
+                    <div class="form-check-inline">
+                        <input type="checkbox" id="image-<%=index%>" name="deleteImages[]" value="<%= image.filename %>" class="form-check-input">
+                    </div>
+                    <label for="image-<%=index%>">Delete?</label>
+                <% }); %>
+            </div>
+            <div class="mb-3">
+                <button class="btn btn-info">Update Climbing Route</button>
+            </div>
+        </form>
+        <a href="/climbRoutes/<%= climbRoute._id%>">Back to Route</a>
+
+    </div>
+</div>
