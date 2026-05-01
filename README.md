@@ -121,5 +121,5 @@ inSpire/
 ```
 
 
-Built by **Jesus Arias** as a personal learning project.
+Built by **Jesus Arias**
 Feel free to open an issue or reach out with questions or feedback.
