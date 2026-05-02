@@ -7,6 +7,12 @@ Users can browse routes on an interactive map, create accounts, post their own r
 
 ---
 
+## Live Demo
+
+**[https://inspire-climbing-67b5b17b2259.herokuapp.com/](https://inspire-climbing-67b5b17b2259.herokuapp.com/)**
+
+> Hosted on Heroku Eco
+
 ## Features
 
 - **User authentication** — register, log in, and log out with sessions persisted in MongoDB (Passport.js + passport-local)
