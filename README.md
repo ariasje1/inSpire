@@ -166,6 +166,10 @@ inSpire/
     ├── cities.js
     ├── index.js
     └── seedHelpers.js
+├── screenshots/
+│   ├── home.png
+│   ├── routes-index.png
+│   └── route-detail.png
 ```
 
 
