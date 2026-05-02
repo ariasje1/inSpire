@@ -22,7 +22,7 @@ Users can browse routes on an interactive map, create accounts, post their own r
 
 ### Browse climbing routes
 Routes are clustered geographically on an interactive Mapbox map.
-![Routes index with cluster map](screenshots/routes-index.png)
+![Routes index with cluster map](screenshots/route-index.png)
 
 ### Route details
 Each route shows photos, location, and community reviews.
