@@ -111,19 +111,44 @@ The app reads these from a `.env` file at the project root:
 ```
 inSpire/
 ├── app.js                  # Main Express app — middleware, routes, error handling
-├── controllers/            # Route handler logic (climbRoutes, reviews, users)
-├── models/                 # Mongoose schemas (ClimbRoute, Review, User)
-├── routes/                 # Express routers
-├── views/                  # EJS templates
-│   ├── climbRoutes/        # Index, show, new, edit pages
-│   ├── users/              # Login, register
-│   └── partials/           # Shared layout, navbar, flash, footer
-├── public/                 # Static assets — CSS and client-side JS
-├── utils/                  # Helpers — catchAsync, ExpressError, sanitizers
-├── cloudinary/             # Cloudinary + multer storage config
-├── seeds/                  # Database seed scripts
 ├── middleware.js           # Custom middleware (auth, validation, ownership)
-└── schemas.js              # Joi validation schemas
+├── schemas.js              # Joi validation schemas
+├── README.md
+├── package.json
+├── package-lock.json
+├── cloudinary/
+│   └── index.js            # Cloudinary + multer storage config
+├── controllers/
+│   ├── climbRoutes.js
+│   ├── reviews.js
+│   └── users.js
+├── models/
+│   ├── climbRoute.js
+│   ├── review.js
+│   └── user.js
+├── routes/
+│   ├── climbRoutes.js
+│   ├── reviews.js
+│   └── users.js
+├── views/
+│   ├── climbRoutes/        # edit, index, new, show
+│   ├── users/              # login, register
+│   ├── partials/           # navbar, flash, footer
+│   ├── layout/             # boilerplate.ejs
+│   ├── home.ejs            # Landing page
+│   ├── error.ejs           # Error page
+│   └── notfound.ejs        # 404 page
+├── public/
+│   ├── javascripts/        # clusterMap, showPageMap, validateForms
+│   └── stylesheets/        # app, home, stars
+├── utils/
+│   ├── catchAsync.js
+│   ├── ExpressError.js
+│   └── mongoSanitizeV5.js
+└── seeds/
+    ├── cities.js
+    ├── index.js
+    └── seedHelpers.js
 ```
 
 
