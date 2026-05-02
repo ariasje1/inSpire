@@ -13,6 +13,23 @@ Users can browse routes on an interactive map, create accounts, post their own r
 
 > Hosted on Heroku Eco
 
+---
+
+## Screenshots
+
+### Home page
+![inSpire home page](screenshots/home.png)
+
+### Browse climbing routes
+Routes are clustered geographically on an interactive Mapbox map.
+![Routes index with cluster map](screenshots/routes-index.png)
+
+### Route details
+Each route shows photos, location, and community reviews.
+![Climbing route detail page](screenshots/route-detail.png)
+
+---
+
 ## Features
 
 - **User authentication** — register, log in, and log out with sessions persisted in MongoDB (Passport.js + passport-local)
